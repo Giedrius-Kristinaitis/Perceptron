@@ -60,7 +60,7 @@ for training_data in [data[1].values[i:i + chunk_size] for i in range(0, 200, ch
     training_input.append(training_input_set)
     training_output.append([training_data[len(training_data) - 1]])
 
-# train the perceptron and get training error matrix6
+# train the perceptron and get training error matrix
 error = net.train(training_input, training_output, epochs=epochs, lr=learning_rate, show=epochs_to_show)
 
 # plot error
