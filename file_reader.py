@@ -2,6 +2,7 @@ from attributes import NumericAttribute
 from attributes import CategoricalAttribute
 from typing import Dict
 from itertools import islice
+import re
 
 def read_file(file_name: str, attribute_types: Dict[str, str]) -> list:
     lines = read_file_lines(file_name)
@@ -9,7 +10,7 @@ def read_file(file_name: str, attribute_types: Dict[str, str]) -> list:
     data = initialize_attributes(lines[0], attribute_types)
 
     for line in islice(lines, 1, None):
-        parts = line.split('\t')
+        parts = re.split('\t,;', line)
 
         for index, part in enumerate(parts):
             if data[index] is None:

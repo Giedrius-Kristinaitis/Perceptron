@@ -5,13 +5,15 @@ import pylab as pl
 
 # read data
 attribute_types = {
-    "suicides_no": "numeric",
-    "population": "numeric",
-    "HDI for year": "numeric",
-    "gdp_for_year ($)": "numeric"
+    "Lag1": "numeric",
+    "Lag2": "numeric",
+    "Lag3": "numeric",
+    "Lag4": "numeric",
+    "Lag5": "numeric",
+    "Volume": "numeric"
 }
 
-data = read_file("suicides.csv", attribute_types)
+data = read_file("stock.csv", attribute_types)
 
 # input count for a single output
 n = 9
