@@ -1,22 +1,22 @@
 from file_reader import read_file
-
 import neurolab as nl
 import pylab as pl
 
-# read data
+# read stock data
 attribute_types = {
     "Lag1": "numeric",
     "Lag2": "numeric",
     "Lag3": "numeric",
     "Lag4": "numeric",
     "Lag5": "numeric",
-    "Volume": "numeric"
+    "Volume": "numeric",
+    "Today": "numeric"
 }
 
 data = read_file("stock.csv", attribute_types)
 
 # input count for a single output
-n = 9
+n = 6
 
 # learning rate
 learning_rate = 0.000005
