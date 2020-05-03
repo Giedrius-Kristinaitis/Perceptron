@@ -94,7 +94,7 @@ net.trainf.defaults["goal"] = 200
 # get training input and output
 training_input, training_output = get_inputs_outputs(data[1].values, n, 0, 200)
 
-# train the perceptron and get training error matrix6
+# train the perceptron and get training error matrix
 error = net.train(training_input, training_output, epochs=epochs, lr=learning_rate, show=epochs_to_show)
 
 # display neuron parameters
