@@ -10,7 +10,7 @@ def read_file(file_name: str, attribute_types: Dict[str, str]) -> list:
     data = initialize_attributes(lines[0], attribute_types)
 
     for line in islice(lines, 1, None):
-        parts = re.split('\t,;', line)
+        parts = re.split(r'[\t,;]', line)
 
         for index, part in enumerate(parts):
             if data[index] is None:
@@ -30,7 +30,7 @@ def read_file(file_name: str, attribute_types: Dict[str, str]) -> list:
 def initialize_attributes(name_line: str, attribute_types: Dict[str, str]) -> list:
     data = []
 
-    for part in re.split('\t,;', name_line):
+    for part in re.split(r'[\t,;]', name_line):
         attribute_name = part.strip()
 
         if attribute_name in attribute_types:
