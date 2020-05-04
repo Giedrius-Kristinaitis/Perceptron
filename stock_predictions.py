@@ -109,8 +109,4 @@ errors = [
     perform_simulation(900, 1000),
 ]
 
-# 1.8891 - 0.002
-# 1.7555 - 0.000005
-# ~7%
-
 print(f"Average error: {np.average(errors)}")
